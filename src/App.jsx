@@ -18,9 +18,9 @@ function App() {
       <h1>My first react app</h1>
 
       <ProfileCard
-        name={githubData.login}
-        role={githubData.type}
-        bio={githubData.id}
+        name={githubData && githubData.login || 'Loading...'}
+        role={githubData && githubData.type || 'Loading...'}
+        bio={githubData && githubData.bio || 'no bio available'}
       />
 
     </div>
